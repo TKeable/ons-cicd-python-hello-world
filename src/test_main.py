@@ -16,3 +16,7 @@ def test_hello_world_message_from_index():
 def test_hello_world_message_from_client(client):
     response = client.get('/')
     assert response.data.decode('UTF-8') == 'Hello ONS'
+
+    
+def test_goodbye_message_from_index():
+    assert index() == 'Goodbye'
